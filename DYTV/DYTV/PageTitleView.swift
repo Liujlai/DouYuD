@@ -23,7 +23,7 @@ class PageTitleView: UIView {
  var titles :[String]
     
     //MARK: -懒加载属性
-    
+    lazy var titleLables: [UILabel] = [UILabel]()
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = false
@@ -31,6 +31,13 @@ class PageTitleView: UIView {
 //        设置不超过范围
         scrollView.bounces = false
         return scrollView
+    }()
+    
+    lazy var scrollLine: UIView = {
+        let scrollLine = UIView()
+        scrollLine.backgroundColor = UIColor.orange
+        
+        return scrollLine
     }()
     
     //MARK: -自定义构造函数
@@ -80,14 +87,35 @@ extension PageTitleView{
             label.textColor = UIColor.darkGray
             label.textAlignment = .center
 //3.            设置label的frame---->才能使其显示出来
+            setupBottonMenuAndScrollLine()
           
             let labelX:CGFloat = labelW * CGFloat(index)
 
             label.frame = CGRect(x: labelX, y: labelY, width: labelW, height: labelH)
 //4.             将lable添加到scrollView中
             scrollView.addSubview(label)
+            titleLables.append(label)
             
         }
     }
+    
+    private func setupBottonMenuAndScrollLine(){
+//       1. 添加底线
+        let buttonLine = UIView()
+        buttonLine.backgroundColor = UIColor.lightGray
+        let lineH:CGFloat = 0.5
+        
+        buttonLine.frame = CGRect(x: 0, y: frame.height - lineH, width: frame.width, height: lineH)
+        scrollView.addSubview(buttonLine)
+//       2. 添加scrollLine
+//        获取第一个label
+        guard let firstLabel = titleLables.first else{ return }
+        firstLabel.textColor = UIColor.orange
+        
+        scrollView.addSubview(scrollLine)
+        
+        scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstLabel.frame.width, height: kScrollLineH)
+    }
+    
     
 }

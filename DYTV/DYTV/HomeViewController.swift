@@ -71,9 +71,9 @@ extension HomeViewController{
 //       or 调用类方法
 //        let historyItem = UIBarButtonItem.createItem(imageName: "history_btn_pk", highImageName: "", size: size)
         
-        let searchItem = UIBarButtonItem.createItem(imageName: "searchBtnIconHL", highImageName: "", size: size)
+        let searchItem = UIBarButtonItem.createItem(imageName: "searchBtnIconHL", size: size)
         
-        let  qrcodeItem = UIBarButtonItem.createItem(imageName: "scanIconHL", highImageName: "", size: size)
+        let  qrcodeItem = UIBarButtonItem.createItem(imageName: "scanIconHL", highImageName: "scanIconHL", size: size)
         
         navigationItem.rightBarButtonItems = [historyItem,searchItem,qrcodeItem]
     }
