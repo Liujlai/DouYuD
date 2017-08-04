@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
         let titleFrame = CGRect(x: 0, y: k状态栏的高度 + kNavigationBarH, width: kScreenW, height: kTitleH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
+
         return titleView
     }()
     
@@ -49,6 +50,8 @@ class HomeViewController: UIViewController {
 //MARK: -设置UI界面
 extension HomeViewController{
     func setupUI(){
+//        不需要调整UIScollView的内边距
+        automaticallyAdjustsScrollViewInsets = false
         // 1. 设置导航栏
         setupNavigationBar()
         // 2.   添加TitlteView
