@@ -15,12 +15,13 @@
 		783D256F1F34043E001ABFF9 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783D256D1F34043E001ABFF9 /* Live.storyboard */; };
 		783D25711F340462001ABFF9 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783D25701F340462001ABFF9 /* Follow.storyboard */; };
 		783D25741F340486001ABFF9 /* ProFile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783D25721F340486001ABFF9 /* ProFile.storyboard */; };
-		783D25791F341057001ABFF9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D25781F341057001ABFF9 /* MainViewController.swift */; };
 		783D257B1F341546001ABFF9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D257A1F341546001ABFF9 /* HomeViewController.swift */; };
 		783D257D1F3415AB001ABFF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D257C1F3415AB001ABFF9 /* ViewController.swift */; };
 		783D25801F3425BF001ABFF9 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D257F1F3425BF001ABFF9 /* UIBarButtonItem.swift */; };
 		783D25831F344F8A001ABFF9 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D25821F344F8A001ABFF9 /* PageTitleView.swift */; };
 		783D25851F3453D3001ABFF9 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D25841F3453D3001ABFF9 /* Common.swift */; };
+		7849DC9E1F37FB26008E7D75 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7849DC9D1F37FB26008E7D75 /* PageContentView.swift */; };
+		7849DCA01F380BA3008E7D75 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7849DC9F1F380BA3008E7D75 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +35,13 @@
 		783D256E1F34043E001ABFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Live.storyboard; sourceTree = "<group>"; };
 		783D25701F340462001ABFF9 /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		783D25731F340486001ABFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProFile.storyboard; sourceTree = "<group>"; };
-		783D25781F341057001ABFF9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		783D257A1F341546001ABFF9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		783D257C1F3415AB001ABFF9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		783D257F1F3425BF001ABFF9 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		783D25821F344F8A001ABFF9 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		783D25841F3453D3001ABFF9 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		7849DC9D1F37FB26008E7D75 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		7849DC9F1F380BA3008E7D75 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,8 @@
 				783D25591F332A90001ABFF9 /* AppDelegate.swift */,
 				783D255D1F332A90001ABFF9 /* Main.storyboard */,
 				783D257A1F341546001ABFF9 /* HomeViewController.swift */,
+				7849DC9D1F37FB26008E7D75 /* PageContentView.swift */,
 				783D257E1F34255E001ABFF9 /* Tools */,
-				783D25781F341057001ABFF9 /* MainViewController.swift */,
 				783D257C1F3415AB001ABFF9 /* ViewController.swift */,
 				783D25751F3404A3001ABFF9 /* New Group */,
 				783D25601F332A90001ABFF9 /* Assets.xcassets */,
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				783D257F1F3425BF001ABFF9 /* UIBarButtonItem.swift */,
+				7849DC9F1F380BA3008E7D75 /* UIColor.swift */,
 				783D25841F3453D3001ABFF9 /* Common.swift */,
 				783D25821F344F8A001ABFF9 /* PageTitleView.swift */,
 			);
@@ -184,10 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				783D25831F344F8A001ABFF9 /* PageTitleView.swift in Sources */,
-				783D25791F341057001ABFF9 /* MainViewController.swift in Sources */,
 				783D25801F3425BF001ABFF9 /* UIBarButtonItem.swift in Sources */,
 				783D255A1F332A90001ABFF9 /* AppDelegate.swift in Sources */,
+				7849DC9E1F37FB26008E7D75 /* PageContentView.swift in Sources */,
 				783D257D1F3415AB001ABFF9 /* ViewController.swift in Sources */,
+				7849DCA01F380BA3008E7D75 /* UIColor.swift in Sources */,
 				783D257B1F341546001ABFF9 /* HomeViewController.swift in Sources */,
 				783D25851F3453D3001ABFF9 /* Common.swift in Sources */,
 			);

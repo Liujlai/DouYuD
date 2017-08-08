@@ -11,14 +11,31 @@ private let kTitleH:CGFloat = 40
 
 class HomeViewController: UIViewController {
 //MARK:-    懒加载属性
-    lazy var pageTitleView: PageTitleView = {
+    lazy var pageTitleView: PageTitleView = {[weak self] in
         
 //        屏幕的宽度 UIScreen.main.bounds.width
         let titleFrame = CGRect(x: 0, y: k状态栏的高度 + kNavigationBarH, width: kScreenW, height: kTitleH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
-
+        titleView.delegate = self
         return titleView
+    }()
+    
+     lazy var pageContentView:PageContentView = {[weak self] in
+//        1. 确定内容的frame
+        let contentH = kScreenH - k状态栏的高度 - kNavigationBarH - kTitleH
+        let contentFrame = CGRect(x: 0, y:  k状态栏的高度 + kNavigationBarH + kTitleH, width: kScreenW, height: contentH)
+//        2. 确定所有的子控制器
+        var childVcs = [UIViewController]()
+        for _ in 0..<4{
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childVcs.append(vc)
+        }
+        
+        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
+        contentView.delegate = self
+        return contentView
     }()
     
 //MARK: -   系统的回调函数
@@ -56,6 +73,9 @@ extension HomeViewController{
         setupNavigationBar()
         // 2.   添加TitlteView
         view.addSubview(pageTitleView)
+//        3.添加ContentView
+        view.addSubview(pageContentView)
+        pageContentView.backgroundColor = UIColor.purple
     }
     
     
@@ -63,7 +83,7 @@ extension HomeViewController{
 //1.设置首页导航栏左侧 logo Item
    
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "logo")
-        //2.    设置右侧的Item
+//2.    设置右侧的Item
         
         let size = CGSize(width: 40, height: 40) //更改 Item的的大小
 //        调用构造方法
@@ -77,4 +97,17 @@ extension HomeViewController{
         
         navigationItem.rightBarButtonItems = [historyItem,searchItem,qrcodeItem]
     }
+}
+//MARK: - 遵守PageTitleViewDelegate协议
+extension HomeViewController: PageTitleViewDelegate{
+    func pageTitleView(titleView: PageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(currentIndex: index)
+    }
+}
+
+//MARK: - 遵守PagecontentViewDelegate协议
+extension HomeViewController : UIPageContentViewDelegate{
+    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+}
 }
