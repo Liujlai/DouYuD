@@ -23,11 +23,12 @@ class HomeViewController: UIViewController {
     
      lazy var pageContentView:PageContentView = {[weak self] in
 //        1. 确定内容的frame
-        let contentH = kScreenH - k状态栏的高度 - kNavigationBarH - kTitleH
+        let contentH = kScreenH - k状态栏的高度 - kNavigationBarH - kTitleH - kTabbarH
         let contentFrame = CGRect(x: 0, y:  k状态栏的高度 + kNavigationBarH + kTitleH, width: kScreenW, height: contentH)
 //        2. 确定所有的子控制器
         var childVcs = [UIViewController]()
-        for _ in 0..<4{
+        childVcs.append(RecommendViewController())
+        for _ in 0..<3{
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVcs.append(vc)
