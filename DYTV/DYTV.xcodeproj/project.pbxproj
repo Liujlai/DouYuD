@@ -24,6 +24,8 @@
 		783D25851F3453D3001ABFF9 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D25841F3453D3001ABFF9 /* Common.swift */; };
 		7849DC9E1F37FB26008E7D75 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7849DC9D1F37FB26008E7D75 /* PageContentView.swift */; };
 		7849DCA01F380BA3008E7D75 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7849DC9F1F380BA3008E7D75 /* UIColor.swift */; };
+		786405B41F3A952000A1DFC3 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786405B21F3A952000A1DFC3 /* CollectionPrettyCell.swift */; };
+		786405B51F3A952000A1DFC3 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786405B31F3A952000A1DFC3 /* CollectionPrettyCell.xib */; };
 		78683EBB1F3957F70098A8B8 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78683EBA1F3957F70098A8B8 /* RecommendViewController.swift */; };
 		78683EBE1F396A020098A8B8 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78683EBC1F396A020098A8B8 /* CollectionHeaderView.swift */; };
 		78683EBF1F396A020098A8B8 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78683EBD1F396A020098A8B8 /* CollectionHeaderView.xib */; };
@@ -49,6 +51,8 @@
 		783D25841F3453D3001ABFF9 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7849DC9D1F37FB26008E7D75 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		7849DC9F1F380BA3008E7D75 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		786405B21F3A952000A1DFC3 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		786405B31F3A952000A1DFC3 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		78683EBA1F3957F70098A8B8 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		78683EBC1F396A020098A8B8 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		78683EBD1F396A020098A8B8 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		78203E401F39B0CB00221E4C /* V */ = {
 			isa = PBXGroup;
 			children = (
+				786405B21F3A952000A1DFC3 /* CollectionPrettyCell.swift */,
+				786405B31F3A952000A1DFC3 /* CollectionPrettyCell.xib */,
 				78683EBC1F396A020098A8B8 /* CollectionHeaderView.swift */,
 				78683EBD1F396A020098A8B8 /* CollectionHeaderView.xib */,
 				78203E411F39B1CA00221E4C /* CollectionNomalCell.swift */,
@@ -207,6 +213,7 @@
 				783D255F1F332A90001ABFF9 /* Main.storyboard in Resources */,
 				783D256F1F34043E001ABFF9 /* Live.storyboard in Resources */,
 				783D25741F340486001ABFF9 /* ProFile.storyboard in Resources */,
+				786405B51F3A952000A1DFC3 /* CollectionPrettyCell.xib in Resources */,
 				783D256C1F3403B8001ABFF9 /* Home.storyboard in Resources */,
 				783D25711F340462001ABFF9 /* Follow.storyboard in Resources */,
 			);
@@ -228,6 +235,7 @@
 				7849DC9E1F37FB26008E7D75 /* PageContentView.swift in Sources */,
 				783D257D1F3415AB001ABFF9 /* ViewController.swift in Sources */,
 				7849DCA01F380BA3008E7D75 /* UIColor.swift in Sources */,
+				786405B41F3A952000A1DFC3 /* CollectionPrettyCell.swift in Sources */,
 				783D257B1F341546001ABFF9 /* HomeViewController.swift in Sources */,
 				783D25851F3453D3001ABFF9 /* Common.swift in Sources */,
 			);
