@@ -121,14 +121,26 @@ extension RecommendViewController : UICollectionViewDataSource,UICollectionViewD
          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
          //        cell.backgroundColor = UIColor.red
          */
-        var cell:UICollectionViewCell!
+//        1.取出Cell
+        let group = recommendVM.anchorGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.item]
+        
+        /**
+//        1.定义Cell
+//        var cell:UICollectionViewCell!
+        */
+//       2.取出Cell
         if indexPath.section == 1{
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+           let  cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
+            cell.anchor = anchor
+            return cell
         }else{
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNomalCell
+            cell.anchor = anchor
+              return cell
         }
         
-        return cell
+      
     }
     
     

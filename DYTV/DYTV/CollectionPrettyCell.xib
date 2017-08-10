@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="133" height="186"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KK3-Pr-2in">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KK3-Pr-2in">
                         <rect key="frame" x="0.0" y="162" width="46" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="bZA-l1-3Xw"/>
@@ -46,40 +46,46 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mc7-ca-F11">
-                        <rect key="frame" x="68" y="5" width="60" height="20"/>
-                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrP-Oe-3vA">
+                        <rect key="frame" x="65" y="8" width="60" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="1rM-Rl-wW8"/>
-                            <constraint firstAttribute="height" constant="20" id="FN1-8n-FTp"/>
+                            <constraint firstAttribute="height" constant="20" id="51z-pg-WTS"/>
+                            <constraint firstAttribute="width" constant="60" id="ZAJ-YR-eEG"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
+                        <state key="normal" title="999在线">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </button>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="mc7-ca-F11" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="5Un-1l-diy"/>
                 <constraint firstItem="5lu-k5-MoI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7b7-yO-WDp"/>
+                <constraint firstAttribute="trailing" secondItem="TrP-Oe-3vA" secondAttribute="trailing" constant="8" id="F0d-bT-K7u"/>
                 <constraint firstItem="KK3-Pr-2in" firstAttribute="top" secondItem="qN2-MZ-P3k" secondAttribute="bottom" constant="5" id="HNT-Jt-ibv"/>
                 <constraint firstAttribute="trailing" secondItem="5lu-k5-MoI" secondAttribute="trailing" id="UHR-CW-IzE"/>
                 <constraint firstAttribute="bottom" secondItem="KK3-Pr-2in" secondAttribute="bottom" constant="10" id="Ur7-Bb-zNw"/>
                 <constraint firstAttribute="trailing" secondItem="qN2-MZ-P3k" secondAttribute="trailing" constant="5" id="V4d-bO-yTo"/>
+                <constraint firstItem="TrP-Oe-3vA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="anb-q6-Pb5"/>
                 <constraint firstItem="5lu-k5-MoI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cEY-Ll-i3s"/>
                 <constraint firstItem="KK3-Pr-2in" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dz4-1s-SXN"/>
-                <constraint firstAttribute="trailing" secondItem="mc7-ca-F11" secondAttribute="trailing" constant="5" id="hjm-nF-6dg"/>
                 <constraint firstItem="qN2-MZ-P3k" firstAttribute="top" secondItem="5lu-k5-MoI" secondAttribute="bottom" constant="5" id="uFI-83-u9S"/>
                 <constraint firstItem="qN2-MZ-P3k" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wTZ-Wf-WZu"/>
             </constraints>
             <size key="customSize" width="133" height="186"/>
+            <connections>
+                <outlet property="cityBtn" destination="KK3-Pr-2in" id="jsO-yQ-cxa"/>
+                <outlet property="iconImageView" destination="5lu-k5-MoI" id="zum-NE-rz3"/>
+                <outlet property="nickNameLabel" destination="qN2-MZ-P3k" id="uVq-bn-fY6"/>
+                <outlet property="onlineBtn" destination="TrP-Oe-3vA" id="Tc9-qv-afo"/>
+            </connections>
             <point key="canvasLocation" x="-113.5" y="-29"/>
         </collectionViewCell>
     </objects>
