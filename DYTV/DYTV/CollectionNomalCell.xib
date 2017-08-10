@@ -46,7 +46,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMg-wX-sj7">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMg-wX-sj7">
                         <rect key="frame" x="163" y="84" width="57" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="660在线" image="Image_online_gray"/>
@@ -69,6 +69,12 @@
                 <constraint firstItem="heB-1y-2Kq" firstAttribute="centerY" secondItem="WAR-80-ZYr" secondAttribute="centerY" id="wrV-fF-M7q"/>
             </constraints>
             <size key="customSize" width="225" height="128"/>
+            <connections>
+                <outlet property="iconImageView" destination="9fF-pd-U46" id="qyD-mT-IVL"/>
+                <outlet property="nickNameLabel" destination="pTM-Nd-dj2" id="ZwL-aH-KTK"/>
+                <outlet property="onlineBtn" destination="EMg-wX-sj7" id="fwf-T6-6o8"/>
+                <outlet property="roomNameLabel" destination="WAR-80-ZYr" id="H7L-D2-1fg"/>
+            </connections>
             <point key="canvasLocation" x="-44.5" y="26"/>
         </collectionViewCell>
     </objects>

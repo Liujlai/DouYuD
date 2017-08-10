@@ -35,6 +35,7 @@
 		78683EBB1F3957F70098A8B8 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78683EBA1F3957F70098A8B8 /* RecommendViewController.swift */; };
 		78683EBE1F396A020098A8B8 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78683EBC1F396A020098A8B8 /* CollectionHeaderView.swift */; };
 		78683EBF1F396A020098A8B8 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78683EBD1F396A020098A8B8 /* CollectionHeaderView.xib */; };
+		78707BC41F3C5AA00029785F /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78707BC31F3C5AA00029785F /* CollectionBaseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		78683EBA1F3957F70098A8B8 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		78683EBC1F396A020098A8B8 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		78683EBD1F396A020098A8B8 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		78707BC31F3C5AA00029785F /* CollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		8F69B01D21D52D9746FC81C1 /* Pods_DYTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9B539C8FE84BDEDEBA9787 /* Pods-DYTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYTV/Pods-DYTV.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 		78203E401F39B0CB00221E4C /* V */ = {
 			isa = PBXGroup;
 			children = (
+				78707BC31F3C5AA00029785F /* CollectionBaseCell.swift */,
 				786405B21F3A952000A1DFC3 /* CollectionPrettyCell.swift */,
 				786405B31F3A952000A1DFC3 /* CollectionPrettyCell.xib */,
 				78683EBC1F396A020098A8B8 /* CollectionHeaderView.swift */,
@@ -344,6 +347,7 @@
 				7849DCA01F380BA3008E7D75 /* UIColor.swift in Sources */,
 				786405B41F3A952000A1DFC3 /* CollectionPrettyCell.swift in Sources */,
 				786405DC1F3AF87D00A1DFC3 /* NSDate-Extension.swift in Sources */,
+				78707BC41F3C5AA00029785F /* CollectionBaseCell.swift in Sources */,
 				783D257B1F341546001ABFF9 /* HomeViewController.swift in Sources */,
 				786405D71F3AE36500A1DFC3 /* NetworkTools.swift in Sources */,
 				783D25851F3453D3001ABFF9 /* Common.swift in Sources */,
