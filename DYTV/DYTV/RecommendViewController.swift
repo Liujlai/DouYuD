@@ -23,6 +23,8 @@ class RecommendViewController: UIViewController {
     
     
     //MARK: 懒加载属性
+    lazy var recommendVM: RecommendViewModel = RecommendViewModel()
+    
     lazy var collectionView: UICollectionView = {[unowned self] in
         //        1.创建布局
         //        流水布局
@@ -37,7 +39,7 @@ class RecommendViewController: UIViewController {
         layout .sectionInset = UIEdgeInsets(top: 0, left: kItemMargin, bottom: 0, right: kItemMargin)
         
         //        2.创建UICollection
-
+        
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         
         collectionView.backgroundColor = UIColor.white
@@ -52,7 +54,7 @@ class RecommendViewController: UIViewController {
         //        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
         collectionView.register(UINib(nibName:"CollectionNomalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         
-         collectionView.register(UINib(nibName:"CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
+        collectionView.register(UINib(nibName:"CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
         //                 collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         collectionView.register(UINib(nibName:"CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         
@@ -68,8 +70,8 @@ class RecommendViewController: UIViewController {
         //        设置U界面
         setupUI()
         
-        
-        
+        //        发送网络请求
+        loadData()
         
         
     }
@@ -86,26 +88,38 @@ extension RecommendViewController{
         view.addSubview(collectionView)
     }
 }
+
+//MARK: -请求数据
+extension RecommendViewController{
+    func loadData(){
+        recommendVM.requestData { 
+            self.collectionView.reloadData()
+        }
+    }
+}
+
 //MARK : - 遵守UICollectionView的数据源协议
 extension RecommendViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     //    有多少组
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return recommendVM.anchorGroups.count
     }
     //    每组有
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if section == 0 {
-            return 8
-        }
-        return 4
+        let group = recommendVM.anchorGroups[section]
+        
+//        if section == 0 {
+//            return 8
+//        }
+        return group.anchors.count
         
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         /**
-        //1.获取Cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
-        //        cell.backgroundColor = UIColor.red
+         //1.获取Cell
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+         //        cell.backgroundColor = UIColor.red
          */
         var cell:UICollectionViewCell!
         if indexPath.section == 1{
@@ -120,7 +134,10 @@ extension RecommendViewController : UICollectionViewDataSource,UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //1. 取出section的HearderView
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
+//        2.取出模型
+        headerView.group = recommendVM.anchorGroups[indexPath.section]
+        
         
         //        headerView.backgroundColor = UIColor.green
         return headerView

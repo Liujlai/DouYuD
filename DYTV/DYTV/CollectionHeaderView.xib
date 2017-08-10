@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionHeaderView" customModule="DYTV" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="DYTV" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -54,6 +54,10 @@
                 <constraint firstAttribute="trailing" secondItem="Tn9-w1-zvj" secondAttribute="trailing" constant="10" id="ZS1-jX-ODY"/>
                 <constraint firstItem="Tn9-w1-zvj" firstAttribute="top" secondItem="T8G-zx-RzX" secondAttribute="bottom" constant="5" id="hqn-a1-eDO"/>
             </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="BhL-Bc-vsH" id="tIp-Tv-04o"/>
+                <outlet property="titleLable" destination="CeE-bR-6ko" id="VDx-zW-Bry"/>
+            </connections>
             <point key="canvasLocation" x="91" y="99"/>
         </collectionReusableView>
     </objects>
