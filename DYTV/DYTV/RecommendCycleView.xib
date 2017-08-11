@@ -26,10 +26,11 @@
                     </collectionViewFlowLayout>
                     <connections>
                         <outlet property="dataSource" destination="iN0-l3-epB" id="3Lm-Ik-d8d"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="cgz-pE-Bmv"/>
                     </connections>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="IAz-4P-9z2">
-                    <rect key="frame" x="326" y="113" width="39" height="37"/>
+                    <rect key="frame" x="326" y="116" width="39" height="37"/>
                     <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="currentPageIndicatorTintColor" red="1" green="0.66710047422358887" blue="0.22400372773649813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
@@ -40,7 +41,7 @@
                 <constraint firstAttribute="trailing" secondItem="IAz-4P-9z2" secondAttribute="trailing" constant="10" id="KOU-d6-bxH"/>
                 <constraint firstItem="ThE-UW-mHP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Nut-qD-Uzn"/>
                 <constraint firstItem="ThE-UW-mHP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OAF-Fv-TUY"/>
-                <constraint firstAttribute="bottom" secondItem="IAz-4P-9z2" secondAttribute="bottom" id="dHI-LO-1eN"/>
+                <constraint firstAttribute="bottom" secondItem="IAz-4P-9z2" secondAttribute="bottom" constant="-3" id="dHI-LO-1eN"/>
                 <constraint firstAttribute="trailing" secondItem="ThE-UW-mHP" secondAttribute="trailing" id="w1G-5d-aYc"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

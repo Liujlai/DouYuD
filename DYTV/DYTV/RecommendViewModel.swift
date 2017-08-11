@@ -11,13 +11,16 @@ import UIKit
 class RecommendViewModel{
     
     lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
-    
+    lazy var cycleModels: [CycleModel] = [CycleModel]()
     lazy var bigDataGroup: AnchorGroup = AnchorGroup()
     lazy var prettyGroup: AnchorGroup = AnchorGroup()
 }
 
 //MARK: -发送网络请求
 extension RecommendViewModel{
+    
+    //    请求推荐数据
+    
     func requestData(finishCallback : @escaping () ->()){
         //        定义参数
         let parameters = ["limit" : "4","offset":"0","time": NSDate.getCurrentTime() as NSString]
@@ -33,7 +36,7 @@ extension RecommendViewModel{
             guard let dataArray = resultDict["data"] as? [[String  : NSObject]] else{ return }
             //            3.  便利字典，并且转成模型对象
             //            3.1创建组
-//            let group = AnchorGroup()
+            //            let group = AnchorGroup()
             //            3.2设置组的属性
             self.bigDataGroup.tag_name = "热门"
             self.bigDataGroup.icon_name = "home_header_hot"
@@ -57,7 +60,7 @@ extension RecommendViewModel{
             guard let dataArray = resultDict["data"] as? [[String  : NSObject]] else{ return }
             //            3.  便利字典，并且转成模型对象
             //            3.1创建组
-//            let group = AnchorGroup()
+            //            let group = AnchorGroup()
             //            3.2设置组的属性
             self.prettyGroup.tag_name = "颜值"
             self.prettyGroup.icon_name = "home_header_phone"
@@ -103,13 +106,29 @@ extension RecommendViewModel{
         
         //         所有的数据都请求到，之后进行排序
         dGroup.notify(queue: DispatchQueue.main) {
-//            队列组打印的顺序似乎🈶️点乱
-//            print("所有数据都请求到")
+            //            队列组打印的顺序似乎🈶️点乱
+            //            print("所有数据都请求到")
             self.anchorGroups.insert(self.prettyGroup, at: 0)
             self.anchorGroups.insert(self.bigDataGroup, at: 0)
             
             finishCallback()
         }
         
+    }
+    
+    //    请求无限轮播的数据
+    func requestCycleData(finishCallback:@escaping () -> ()) {
+        NetworkTools.requestData(URLString: "http://www.douyutv.com/api/v1/slide/6", type: .get, parameters: ["version" : "2.300"]) { (result) in
+            
+            guard let resultDirt = result as? [String : NSObject] else{ return}
+            
+            guard let dataArray = resultDirt["data"] as? [[String : NSObject]] else { return }
+            
+            for dict in dataArray{
+                self.cycleModels.append(CycleModel(dict: dict))
+            }
+            
+            finishCallback()
+        }
     }
 }
