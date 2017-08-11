@@ -36,7 +36,7 @@ class CollectionBaseCell: UICollectionViewCell {
             
             //            4.显示封面图片
             guard  let iconURL = URL(string: anchor.vertical_src) else{ return }
-            
+            print(iconURL)
             iconImageView.kf.setImage(with: iconURL)
         }
     }
