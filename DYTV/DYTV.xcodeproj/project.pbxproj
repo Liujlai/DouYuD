@@ -10,6 +10,7 @@
 		575B1A2AA092884CED480691 /* Pods_DYTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F69B01D21D52D9746FC81C1 /* Pods_DYTV.framework */; };
 		781152B61F3EA0DC00771076 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781152B41F3EA0DC00771076 /* CollectionGameCell.swift */; };
 		781152B71F3EA0DC00771076 /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781152B51F3EA0DC00771076 /* CollectionGameCell.xib */; };
+		781152B91F3EE8E700771076 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781152B81F3EE8E700771076 /* GameViewController.swift */; };
 		78203E431F39B1CA00221E4C /* CollectionNomalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78203E411F39B1CA00221E4C /* CollectionNomalCell.swift */; };
 		78203E441F39B1CA00221E4C /* CollectionNomalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78203E421F39B1CA00221E4C /* CollectionNomalCell.xib */; };
 		783D255A1F332A90001ABFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D25591F332A90001ABFF9 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		3F6C24362A97C78988063DFE /* Pods-DYTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYTV/Pods-DYTV.debug.xcconfig"; sourceTree = "<group>"; };
 		781152B41F3EA0DC00771076 /* CollectionGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
 		781152B51F3EA0DC00771076 /* CollectionGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
+		781152B81F3EE8E700771076 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		78203E411F39B1CA00221E4C /* CollectionNomalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNomalCell.swift; sourceTree = "<group>"; };
 		78203E421F39B1CA00221E4C /* CollectionNomalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNomalCell.xib; sourceTree = "<group>"; };
 		783D25561F332A90001ABFF9 /* DYTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				78683EBA1F3957F70098A8B8 /* RecommendViewController.swift */,
+				781152B81F3EE8E700771076 /* GameViewController.swift */,
 				783D257A1F341546001ABFF9 /* HomeViewController.swift */,
 			);
 			name = C;
@@ -370,6 +373,7 @@
 				783D25831F344F8A001ABFF9 /* PageTitleView.swift in Sources */,
 				78683EBE1F396A020098A8B8 /* CollectionHeaderView.swift in Sources */,
 				78203E431F39B1CA00221E4C /* CollectionNomalCell.swift in Sources */,
+				781152B91F3EE8E700771076 /* GameViewController.swift in Sources */,
 				783D25801F3425BF001ABFF9 /* UIBarButtonItem.swift in Sources */,
 				786405DE1F3B012E00A1DFC3 /* AnchorGroup.swift in Sources */,
 				78683EBB1F3957F70098A8B8 /* RecommendViewController.swift in Sources */,

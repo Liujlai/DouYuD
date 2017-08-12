@@ -8,7 +8,10 @@
 
 import UIKit
 
-let kGameCellID = "kGameCellID"
+private let kGameCellID = "kGameCellID"
+//内边距的大小为10
+let kEdgeInsetMargin : CGFloat = 10
+
 
 
 class RecommendGameView: UIView {
@@ -41,8 +44,13 @@ class RecommendGameView: UIView {
         //        注册Cell
         collectionView.register( UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
 //        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kGameCellID)
-    }
-    
+        //按图标的显示效果似乎不需要内边距--》效果更好--》所以注释
+        /*
+//        给collectionView添加内边距
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: kEdgeInsetMargin, bottom: 0, right: kEdgeInsetMargin)
+    */
+ 
+ }
     
 }
 
