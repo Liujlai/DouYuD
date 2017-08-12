@@ -16,6 +16,9 @@ let kPrettyItemH = kItemW * 4 / 3
 let kHeaderViewH : CGFloat = 50
 
 let kCycleViewH = kScreenW * 3 / 8
+let kGameviewH : CGFloat = 90
+
+
 
 //标识
 let kNormalCellID = "kNormalCellID"
@@ -67,14 +70,19 @@ class RecommendViewController: UIViewController {
     
     lazy var cycleView: RecommendCycleView = {
         let cycleView = RecommendCycleView.recommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameviewH), width: kScreenW, height: kCycleViewH)
         return cycleView
     }()
     
+    lazy var gameView: RecommendGameView = {
+        let gameView = RecommendGameView.recommendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameviewH, width: kScreenW, height: kGameviewH)
+        return gameView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        view.backgroundColor = UIColor.purple
+        //        view.backgroundColor = UIColor.purple 
         //        设置U界面
         setupUI()
         
@@ -96,10 +104,11 @@ extension RecommendViewController{
         view.addSubview(collectionView)
         // 2.将CycleView添加到UICollection
         collectionView.addSubview(cycleView)
+//        3.将gameView添加collectionView
+        collectionView.addSubview(gameView)
         
-        
-        //3. 设置collectionView的内边距
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        //4. 设置collectionView的内边距
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameviewH, left: 0, bottom: 0, right: 0)
     }
 }
 
