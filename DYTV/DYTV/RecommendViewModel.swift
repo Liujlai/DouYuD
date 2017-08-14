@@ -47,7 +47,7 @@ extension RecommendViewModel{
             }
             //            3.4离开组
             dGroup.leave()
-            print("请求到第0组的数据")
+//            print("请求到第0组的数据")
         }
         
         //        2.请求第二部分的颜值数据
@@ -72,7 +72,7 @@ extension RecommendViewModel{
             
             //        3.4离开组
             dGroup.leave()
-            print("请求到1")
+//            print("请求到1")
         }
         
         
@@ -100,7 +100,7 @@ extension RecommendViewModel{
             //            }
             //           4.离开组
             dGroup.leave()
-            print("请求到2～12")
+//            print("请求到2～12")
             
         }
         

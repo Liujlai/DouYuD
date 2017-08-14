@@ -6,32 +6,29 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="DYTV" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionGameCell" customModule="DYTV" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="80" height="90"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC9-27-6cg">
-                        <rect key="frame" x="29" y="65" width="22.5" height="15"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="8Am-f2-9XZ"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PC9-27-6cg">
+                        <rect key="frame" x="29" y="64.5" width="22.5" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ioB-sa-s0W">
-                        <rect key="frame" x="18" y="15" width="45" height="45"/>
+                        <rect key="frame" x="18" y="14.5" width="45" height="45"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="ioB-sa-s0W" secondAttribute="height" multiplier="1:1" id="sYX-La-x4Z"/>
+                            <constraint firstAttribute="width" constant="45" id="Va0-8g-tYb"/>
+                            <constraint firstAttribute="height" constant="45" id="agI-4m-JJh"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -40,14 +37,23 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-kr-NaQ">
+                        <rect key="frame" x="0.0" y="90" width="80" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="juj-KN-XwA"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="PC9-27-6cg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="FIg-0G-S1h"/>
-                <constraint firstItem="ioB-sa-s0W" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="iNo-G7-Sz8"/>
-                <constraint firstItem="PC9-27-6cg" firstAttribute="top" secondItem="ioB-sa-s0W" secondAttribute="bottom" constant="5" id="n9N-p4-40J"/>
-                <constraint firstItem="ioB-sa-s0W" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="rlv-CL-6V6"/>
-                <constraint firstAttribute="bottom" secondItem="PC9-27-6cg" secondAttribute="bottom" constant="10" id="zaI-5A-RlL"/>
+                <constraint firstAttribute="bottom" secondItem="WB1-kr-NaQ" secondAttribute="bottom" constant="-1" id="1aG-ST-z96"/>
+                <constraint firstItem="ioB-sa-s0W" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-8" id="60X-jp-k8g"/>
+                <constraint firstItem="ioB-sa-s0W" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="LUM-c7-Fis"/>
+                <constraint firstItem="WB1-kr-NaQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="O3y-re-aBY"/>
+                <constraint firstAttribute="trailing" secondItem="WB1-kr-NaQ" secondAttribute="trailing" id="SDf-gl-8Zx"/>
+                <constraint firstItem="PC9-27-6cg" firstAttribute="top" secondItem="ioB-sa-s0W" secondAttribute="bottom" constant="5" id="hY4-2C-Ojv"/>
+                <constraint firstItem="PC9-27-6cg" firstAttribute="centerX" secondItem="ioB-sa-s0W" secondAttribute="centerX" id="uMc-Pr-IfN"/>
             </constraints>
             <size key="customSize" width="66" height="82"/>
             <connections>

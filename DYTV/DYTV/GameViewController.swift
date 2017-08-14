@@ -17,6 +17,7 @@ private let kGameCellID = "kGameCellID"
 class GameViewController: UIViewController {
     
     //MARK:懒加载属性
+    fileprivate lazy var  gameVM :GameViewModel = GameViewModel()
     fileprivate lazy var collectionView: UICollectionView  = { [ unowned  self ]  in
         //        1.创建布局
         let layout = UICollectionViewFlowLayout()
@@ -30,6 +31,8 @@ class GameViewController: UIViewController {
         //      2.  创建UICollectionView
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         
+        collectionView.backgroundColor = UIColor.white
+        collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         //为了让其显示，注册Cell
         collectionView.register( UINib(nibName: "CollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
         collectionView.dataSource = self
@@ -43,6 +46,7 @@ class GameViewController: UIViewController {
         
         
         setupUI()
+        loadData()
         
     }
     
@@ -54,21 +58,32 @@ extension GameViewController{
         view.addSubview(collectionView)
     }
 }
+//MARK: 请求数据
+extension GameViewController{
+    fileprivate func loadData(){
+        gameVM.loadAllGameData {
+            self.collectionView.reloadData()
+        }
+    }
+}
 
 
 //MARK:   遵守UICollectionView 的数据源&代理
 extension GameViewController :  UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 60
+        return gameVM.game.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //1.获取cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as!  CollectionGameCell
+        
         
         //        设置随机背景颜色
-        cell.backgroundColor = UIColor.randomColor()
-        
+//        cell.backgroundColor = UIColor.randomColor()
+
+        cell.baseGame =  gameVM.game[indexPath.item]
+
         return cell
     }
     

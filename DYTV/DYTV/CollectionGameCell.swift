@@ -14,11 +14,11 @@ class CollectionGameCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     //MARK: 定义模型属性
-    var  group :AnchorGroup?{
+    var  baseGame :BaseGameModel?{
         didSet{
-            titleLabel.text = group?.tag_name
+            titleLabel.text = baseGame?.tag_name
 //            强行解包，因为拿到的事可选类型
-            let iconURL = URL(string: group?.icon_url ?? "")
+            let iconURL = URL(string: baseGame?.icon_url ?? "")
             iconImageView.kf.setImage(with: iconURL , placeholder : UIImage(named: "btn_H5_more"))
             
 
