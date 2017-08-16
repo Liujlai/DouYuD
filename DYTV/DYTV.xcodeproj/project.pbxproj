@@ -31,6 +31,8 @@
 		783D25851F3453D3001ABFF9 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D25841F3453D3001ABFF9 /* Common.swift */; };
 		7849DC9E1F37FB26008E7D75 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7849DC9D1F37FB26008E7D75 /* PageContentView.swift */; };
 		7849DCA01F380BA3008E7D75 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7849DC9F1F380BA3008E7D75 /* UIColor.swift */; };
+		7850317D1F42DCE3002CDF2B /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850317C1F42DCE3002CDF2B /* AmuseViewController.swift */; };
+		7850317F1F42F1BA002CDF2B /* AmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850317E1F42F1BA002CDF2B /* AmuseViewModel.swift */; };
 		78510E571F3D39C800F93376 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78510E561F3D39C800F93376 /* RecommendCycleView.xib */; };
 		78510E591F3D861F00F93376 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78510E581F3D861F00F93376 /* CycleModel.swift */; };
 		78510E5C1F3D8E2D00F93376 /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78510E5A1F3D8E2D00F93376 /* CollectionCycleCell.swift */; };
@@ -78,6 +80,8 @@
 		783D25841F3453D3001ABFF9 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7849DC9D1F37FB26008E7D75 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		7849DC9F1F380BA3008E7D75 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		7850317C1F42DCE3002CDF2B /* AmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
+		7850317E1F42F1BA002CDF2B /* AmuseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewModel.swift; sourceTree = "<group>"; };
 		78510E561F3D39C800F93376 /* RecommendCycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		78510E581F3D861F00F93376 /* CycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		78510E5A1F3D8E2D00F93376 /* CollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				78683EBA1F3957F70098A8B8 /* RecommendViewController.swift */,
+				7850317C1F42DCE3002CDF2B /* AmuseViewController.swift */,
 				781152B81F3EE8E700771076 /* GameViewController.swift */,
 				783D257A1F341546001ABFF9 /* HomeViewController.swift */,
 			);
@@ -210,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				786405D81F3AE7E900A1DFC3 /* RecommendViewModel.swift */,
+				7850317E1F42F1BA002CDF2B /* AmuseViewModel.swift */,
 				781152BA1F3EF8DE00771076 /* GameViewModel.swift */,
 			);
 			name = VM;
@@ -380,6 +386,7 @@
 			files = (
 				78707BC61F3C65280029785F /* RecommendCycleView.swift in Sources */,
 				783D25831F344F8A001ABFF9 /* PageTitleView.swift in Sources */,
+				7850317F1F42F1BA002CDF2B /* AmuseViewModel.swift in Sources */,
 				78683EBE1F396A020098A8B8 /* CollectionHeaderView.swift in Sources */,
 				781152BB1F3EF8DE00771076 /* GameViewModel.swift in Sources */,
 				78203E431F39B1CA00221E4C /* CollectionNomalCell.swift in Sources */,
@@ -392,6 +399,7 @@
 				781152BD1F3EFD2100771076 /* GameModel.swift in Sources */,
 				781152BF1F3F00DC00771076 /* BaseGameModel.swift in Sources */,
 				7849DC9E1F37FB26008E7D75 /* PageContentView.swift in Sources */,
+				7850317D1F42DCE3002CDF2B /* AmuseViewController.swift in Sources */,
 				783D257D1F3415AB001ABFF9 /* ViewController.swift in Sources */,
 				78510E5C1F3D8E2D00F93376 /* CollectionCycleCell.swift in Sources */,
 				7849DCA01F380BA3008E7D75 /* UIColor.swift in Sources */,
