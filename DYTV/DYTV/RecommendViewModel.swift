@@ -8,9 +8,9 @@
 
 import UIKit
 
-class RecommendViewModel{
+class RecommendViewModel: BaseViewModel{
     
-    lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
+ 
     lazy var cycleModels: [CycleModel] = [CycleModel]()
     lazy var bigDataGroup: AnchorGroup = AnchorGroup()
     lazy var prettyGroup: AnchorGroup = AnchorGroup()
@@ -79,31 +79,10 @@ extension RecommendViewModel{
         
         //        3.请求后面部分的游戏数据
         dGroup.enter()
-        NetworkTools.requestData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", type: .get, parameters:parameters) { (result) in
-            //            1. 将result 转成字典类型
-            guard let resultDict = result as? [String : NSObject] else{ return }
-            
-            //            2. 根据data的key，获取数组
-            guard let dataArray = resultDict["data"] as? [[String  : NSObject]] else{ return }
-            
-            //            3.遍历数组，获取字典，并将字典转成模型对象
-            for dict in dataArray{
-                let group = AnchorGroup(dict: dict)
-                self.anchorGroups.append(group)
-            }
-            
-            //            for group in self.anchorGroups{
-            //                for anchor in group.anchors {
-            //                    print(anchor.nickname)
-            //                }
-            //                print("-----------------")
-            //            }
-            //           4.离开组
-            dGroup.leave()
-//            print("请求到2～12")
-            
+        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { 
+              dGroup.leave()
         }
-        
+             
         //         所有的数据都请求到，之后进行排序
         dGroup.notify(queue: DispatchQueue.main) {
             //            队列组打印的顺序似乎🈶️点乱

@@ -20,8 +20,8 @@ class RecommendGameView: UIView {
     var groups: [BaseGameModel]?{
         didSet{
 ////            1.移除前两组数据
-//            groups?.removeFirst()
-//            groups?.remove(at: 0)
+            groups?.removeFirst()
+            groups?.remove(at: 0)
 ////            2.添加更多组
 //            let moveGroup = AnchorGroup()
 //            moveGroup.tag_name = "更多"
