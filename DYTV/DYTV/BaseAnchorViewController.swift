@@ -95,10 +95,18 @@ extension BaseAnchorViewController{
 extension BaseAnchorViewController : UICollectionViewDataSource{
     //有几组
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        if baseVm == nil {
+            return 1
+        }
+        
         return baseVm.anchorGroups.count
     }
     //    每组里🈶️几条数据
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if baseVm == nil {
+            return 20
+        }
         return baseVm.anchorGroups[section].anchors.count
     }
     //    返回CELL放入方法
@@ -106,7 +114,9 @@ extension BaseAnchorViewController : UICollectionViewDataSource{
         //        1.取出CEll
         //        选择cell测类型---->为普通cell（kNormalCellID）
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNomalCell
-        
+        if baseVm == nil {
+            return cell
+        }
         //        2.给Cell设置数据
         cell.anchor = baseVm.anchorGroups[indexPath.section].anchors[indexPath.item]
         
@@ -116,6 +126,9 @@ extension BaseAnchorViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //        1.取出HeaderView
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
+        if baseVm == nil {
+            return headerView
+        }
         //        2.给Headerview设置数据
         headerView.group = baseVm.anchorGroups[indexPath.section]
         

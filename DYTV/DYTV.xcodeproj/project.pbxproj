@@ -55,6 +55,7 @@
 		786F0CD21F4BD3C1006F936C /* AmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786F0CD11F4BD3C1006F936C /* AmuseMenuView.xib */; };
 		786F0CD51F4C1B4B006F936C /* AmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F0CD31F4C1B4B006F936C /* AmuseMenuViewCell.swift */; };
 		786F0CD61F4C1B4B006F936C /* AmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786F0CD41F4C1B4B006F936C /* AmuseMenuViewCell.xib */; };
+		786F0CD81F4C2F10006F936C /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F0CD71F4C2F10006F936C /* FunnyViewController.swift */; };
 		78707BC41F3C5AA00029785F /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78707BC31F3C5AA00029785F /* CollectionBaseCell.swift */; };
 		78707BC61F3C65280029785F /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78707BC51F3C65280029785F /* RecommendCycleView.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +111,7 @@
 		786F0CD11F4BD3C1006F936C /* AmuseMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuView.xib; sourceTree = "<group>"; };
 		786F0CD31F4C1B4B006F936C /* AmuseMenuViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseMenuViewCell.swift; sourceTree = "<group>"; };
 		786F0CD41F4C1B4B006F936C /* AmuseMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuViewCell.xib; sourceTree = "<group>"; };
+		786F0CD71F4C2F10006F936C /* FunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
 		78707BC31F3C5AA00029785F /* CollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		78707BC51F3C65280029785F /* RecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		8F69B01D21D52D9746FC81C1 /* Pods_DYTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 				78683EBA1F3957F70098A8B8 /* RecommendViewController.swift */,
 				785031821F442025002CDF2B /* BaseAnchorViewController.swift */,
 				7850317C1F42DCE3002CDF2B /* AmuseViewController.swift */,
+				786F0CD71F4C2F10006F936C /* FunnyViewController.swift */,
 				781152B81F3EE8E700771076 /* GameViewController.swift */,
 				783D257A1F341546001ABFF9 /* HomeViewController.swift */,
 			);
@@ -415,6 +418,7 @@
 				783D25801F3425BF001ABFF9 /* UIBarButtonItem.swift in Sources */,
 				786405DE1F3B012E00A1DFC3 /* AnchorGroup.swift in Sources */,
 				786F0CD51F4C1B4B006F936C /* AmuseMenuViewCell.swift in Sources */,
+				786F0CD81F4C2F10006F936C /* FunnyViewController.swift in Sources */,
 				78683EBB1F3957F70098A8B8 /* RecommendViewController.swift in Sources */,
 				783D255A1F332A90001ABFF9 /* AppDelegate.swift in Sources */,
 				785031811F43F2A2002CDF2B /* BaseViewModel.swift in Sources */,
