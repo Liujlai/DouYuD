@@ -16,7 +16,7 @@ extension AmuseViewModel{
 //    请求娱乐界面的数据
     func loadAmusedata(finishedCallback: @escaping () -> ()){
         
-   loadAnchorData(URLString:  "http://capi.douyucdn.cn/api/v1/getHotRoom/2", finishedCallBack: finishedCallback)
+   loadAnchorData(isGroupData: true, URLString:  "http://capi.douyucdn.cn/api/v1/getHotRoom/2", finishedCallBack: finishedCallback)
             }
     }
     

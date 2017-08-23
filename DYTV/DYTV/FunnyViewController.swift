@@ -11,7 +11,9 @@ import UIKit
 private let kTopmargin: CGFloat = 8
 
 class FunnyViewController: BaseAnchorViewController {
-
+//MARK: -懒加载ViewModel对象
+    fileprivate lazy var funnyVM : FunnyViewModel = FunnyViewModel()
+    
     
 
 }
@@ -26,5 +28,19 @@ extension FunnyViewController{
 //        设置顶部间距
         collectionView.contentInset = UIEdgeInsets(top: kTopmargin, left: 0, bottom: 0, right: 0)
         
+    }
+}
+
+
+
+extension FunnyViewController{
+    override func loadData() {
+       //1.给父类中的ViewModel进行赋值
+        baseVm = funnyVM
+        
+        //2.请求数据
+        funnyVM.loadFunnyData {
+            self.collectionView.reloadData()
+        }
     }
 }

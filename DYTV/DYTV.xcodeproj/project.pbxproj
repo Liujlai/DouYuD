@@ -56,6 +56,7 @@
 		786F0CD51F4C1B4B006F936C /* AmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F0CD31F4C1B4B006F936C /* AmuseMenuViewCell.swift */; };
 		786F0CD61F4C1B4B006F936C /* AmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786F0CD41F4C1B4B006F936C /* AmuseMenuViewCell.xib */; };
 		786F0CD81F4C2F10006F936C /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F0CD71F4C2F10006F936C /* FunnyViewController.swift */; };
+		786F0CDA1F4C34D8006F936C /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786F0CD91F4C34D8006F936C /* FunnyViewModel.swift */; };
 		78707BC41F3C5AA00029785F /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78707BC31F3C5AA00029785F /* CollectionBaseCell.swift */; };
 		78707BC61F3C65280029785F /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78707BC51F3C65280029785F /* RecommendCycleView.swift */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		786F0CD31F4C1B4B006F936C /* AmuseMenuViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseMenuViewCell.swift; sourceTree = "<group>"; };
 		786F0CD41F4C1B4B006F936C /* AmuseMenuViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AmuseMenuViewCell.xib; sourceTree = "<group>"; };
 		786F0CD71F4C2F10006F936C /* FunnyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
+		786F0CD91F4C34D8006F936C /* FunnyViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
 		78707BC31F3C5AA00029785F /* CollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		78707BC51F3C65280029785F /* RecommendCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		8F69B01D21D52D9746FC81C1 /* Pods_DYTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				786405D81F3AE7E900A1DFC3 /* RecommendViewModel.swift */,
+				786F0CD91F4C34D8006F936C /* FunnyViewModel.swift */,
 				7850317E1F42F1BA002CDF2B /* AmuseViewModel.swift */,
 				785031801F43F2A2002CDF2B /* BaseViewModel.swift */,
 				781152BA1F3EF8DE00771076 /* GameViewModel.swift */,
@@ -424,6 +427,7 @@
 				785031811F43F2A2002CDF2B /* BaseViewModel.swift in Sources */,
 				78510E591F3D861F00F93376 /* CycleModel.swift in Sources */,
 				781152BD1F3EFD2100771076 /* GameModel.swift in Sources */,
+				786F0CDA1F4C34D8006F936C /* FunnyViewModel.swift in Sources */,
 				781152BF1F3F00DC00771076 /* BaseGameModel.swift in Sources */,
 				7849DC9E1F37FB26008E7D75 /* PageContentView.swift in Sources */,
 				7850317D1F42DCE3002CDF2B /* AmuseViewController.swift in Sources */,
