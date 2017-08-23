@@ -21,7 +21,7 @@ private let kHeaderViewID = "kHeaderViewID"
 
 
 
-class BaseAnchorViewController: UIViewController {
+class BaseAnchorViewController: BaseViewController {
     
     
     var baseVm : BaseViewModel!
@@ -78,8 +78,14 @@ class BaseAnchorViewController: UIViewController {
 
 //MARK:设置UI界面
 extension BaseAnchorViewController{
-     func  setupUI(){
+     override func  setupUI(){
+//        1.先给父类中的内容View的引用进行赋值
+        contenView = collectionView
+        //2. 再添加collectionView
         view.addSubview(collectionView)
+//        3.最后调用super.setupUI()
+        super.setupUI()
+
     }
 }
 

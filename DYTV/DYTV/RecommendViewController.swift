@@ -73,7 +73,11 @@ extension RecommendViewController{
             let moreGroup = AnchorGroup()
             moreGroup.tag_name = "更多"
             groups.append(moreGroup)
-            self.gameView.groups = self.recommendVM.anchorGroups
+            self.gameView.groups = groups
+           
+//            3.数据请求完成
+            self.loadDataFinished()
+            
         }
         //        2.请求轮播数据
         recommendVM.requestCycleData {
