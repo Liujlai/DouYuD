@@ -10,7 +10,7 @@ import UIKit
 
 class RecommendViewModel: BaseViewModel{
     
- 
+    
     lazy var cycleModels: [CycleModel] = [CycleModel]()
     lazy var bigDataGroup: AnchorGroup = AnchorGroup()
     lazy var prettyGroup: AnchorGroup = AnchorGroup()
@@ -47,7 +47,7 @@ extension RecommendViewModel{
             }
             //            3.4离开组
             dGroup.leave()
-//            print("请求到第0组的数据")
+            //            print("请求到第0组的数据")
         }
         
         //        2.请求第二部分的颜值数据
@@ -72,7 +72,7 @@ extension RecommendViewModel{
             
             //        3.4离开组
             dGroup.leave()
-//            print("请求到1")
+            //            print("请求到1")
         }
         
         
@@ -80,9 +80,9 @@ extension RecommendViewModel{
         //        3.请求后面部分的游戏数据
         dGroup.enter()
         loadAnchorData(isGroupData: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
-              dGroup.leave()
+            dGroup.leave()
         }
-             
+        
         //         所有的数据都请求到，之后进行排序
         dGroup.notify(queue: DispatchQueue.main) {
             //            队列组打印的顺序似乎🈶️点乱

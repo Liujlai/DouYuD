@@ -26,7 +26,7 @@ class RecommendViewController: BaseAnchorViewController {
     //MARK: 懒加载属性
     lazy var recommendVM: RecommendViewModel = RecommendViewModel()
     
-
+    
     
     lazy var cycleView: RecommendCycleView = {
         let cycleView = RecommendCycleView.recommendCycleView()
@@ -44,10 +44,10 @@ class RecommendViewController: BaseAnchorViewController {
 //MARK: -设置UI界面内容
 extension RecommendViewController{
     override func setupUI(){
-       super.setupUI()
+        super.setupUI()
         // 2.将CycleView添加到UICollection
         collectionView.addSubview(cycleView)
-//        3.将gameView添加collectionView
+        //        3.将gameView添加collectionView
         collectionView.addSubview(gameView)
         
         //4. 设置collectionView的内边距
@@ -58,24 +58,24 @@ extension RecommendViewController{
 //MARK: -请求数据
 extension RecommendViewController{
     override func loadData(){
-//        给父类的viewModel进行赋值
+        //        给父类的viewModel进行赋值
         baseVm = recommendVM
         //        1.请求推荐数据
         recommendVM.requestData {
             self.collectionView.reloadData()
             
-//            2.将数据传递给GameView
+            //            2.将数据传递给GameView
             var groups = self.recommendVM.anchorGroups
-//            移除前两条数据
+            //            移除前两条数据
             groups.removeFirst()
             groups.removeFirst()
-//            添加更多分组
+            //            添加更多分组
             let moreGroup = AnchorGroup()
             moreGroup.tag_name = "更多"
             groups.append(moreGroup)
             self.gameView.groups = groups
-           
-//            3.数据请求完成
+            
+            //            3.数据请求完成
             self.loadDataFinished()
             
         }

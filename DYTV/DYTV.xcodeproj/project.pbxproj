@@ -32,6 +32,7 @@
 		78491D741F4D13BD00953E82 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78491D731F4D13BD00953E82 /* BaseViewController.swift */; };
 		78491D761F4D258100953E82 /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78491D751F4D258100953E82 /* RoomShowViewController.swift */; };
 		78491D781F4D25F800953E82 /* RoomNomalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78491D771F4D25F800953E82 /* RoomNomalViewController.swift */; };
+		78491D7A1F4D2F8E00953E82 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78491D791F4D2F8E00953E82 /* CustomNavigationController.swift */; };
 		7849DC9E1F37FB26008E7D75 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7849DC9D1F37FB26008E7D75 /* PageContentView.swift */; };
 		7849DCA01F380BA3008E7D75 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7849DC9F1F380BA3008E7D75 /* UIColor.swift */; };
 		7850317D1F42DCE3002CDF2B /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850317C1F42DCE3002CDF2B /* AmuseViewController.swift */; };
@@ -92,6 +93,7 @@
 		78491D731F4D13BD00953E82 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		78491D751F4D258100953E82 /* RoomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
 		78491D771F4D25F800953E82 /* RoomNomalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNomalViewController.swift; sourceTree = "<group>"; };
+		78491D791F4D2F8E00953E82 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		7849DC9D1F37FB26008E7D75 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		7849DC9F1F380BA3008E7D75 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		7850317C1F42DCE3002CDF2B /* AmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				78683EBA1F3957F70098A8B8 /* RecommendViewController.swift */,
+				78491D791F4D2F8E00953E82 /* CustomNavigationController.swift */,
 				78491D751F4D258100953E82 /* RoomShowViewController.swift */,
 				78491D771F4D25F800953E82 /* RoomNomalViewController.swift */,
 				785031821F442025002CDF2B /* BaseAnchorViewController.swift */,
@@ -431,6 +434,7 @@
 				783D25801F3425BF001ABFF9 /* UIBarButtonItem.swift in Sources */,
 				786405DE1F3B012E00A1DFC3 /* AnchorGroup.swift in Sources */,
 				786F0CD51F4C1B4B006F936C /* AmuseMenuViewCell.swift in Sources */,
+				78491D7A1F4D2F8E00953E82 /* CustomNavigationController.swift in Sources */,
 				786F0CD81F4C2F10006F936C /* FunnyViewController.swift in Sources */,
 				78683EBB1F3957F70098A8B8 /* RecommendViewController.swift in Sources */,
 				783D255A1F332A90001ABFF9 /* AppDelegate.swift in Sources */,
