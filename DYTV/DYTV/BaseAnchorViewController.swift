@@ -134,7 +134,22 @@ extension BaseAnchorViewController : UICollectionViewDataSource{
 }
 extension BaseAnchorViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("点击: \(indexPath)")
+//        1.先取出对应的主播信息
+        let anchor = baseVm.anchorGroups[indexPath.section].anchors[indexPath.item]
+//        2.判断是秀场房间&普通房间
+        anchor.isVertical  == 0 ? pushNormalRoomVc() : presentShowRoomVc()
+        
     }
-
+    private func presentShowRoomVc(){
+//        1.创建ShowRoomVc
+        let showRoomVc = RoomShowViewController()
+//        2.以modal的方式弹出
+        present(showRoomVc, animated: true, completion: nil)
+    }
+    private func pushNormalRoomVc(){
+//        1.创建NormalRoomVc
+        let normalRoomVc = RoomNomalViewController()
+//        2.以Push的方式弹出
+        navigationController?.pushViewController(normalRoomVc, animated: true)
+    }
 }

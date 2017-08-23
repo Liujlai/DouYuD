@@ -30,6 +30,8 @@
 		783D25831F344F8A001ABFF9 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D25821F344F8A001ABFF9 /* PageTitleView.swift */; };
 		783D25851F3453D3001ABFF9 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D25841F3453D3001ABFF9 /* Common.swift */; };
 		78491D741F4D13BD00953E82 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78491D731F4D13BD00953E82 /* BaseViewController.swift */; };
+		78491D761F4D258100953E82 /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78491D751F4D258100953E82 /* RoomShowViewController.swift */; };
+		78491D781F4D25F800953E82 /* RoomNomalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78491D771F4D25F800953E82 /* RoomNomalViewController.swift */; };
 		7849DC9E1F37FB26008E7D75 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7849DC9D1F37FB26008E7D75 /* PageContentView.swift */; };
 		7849DCA01F380BA3008E7D75 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7849DC9F1F380BA3008E7D75 /* UIColor.swift */; };
 		7850317D1F42DCE3002CDF2B /* AmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850317C1F42DCE3002CDF2B /* AmuseViewController.swift */; };
@@ -88,6 +90,8 @@
 		783D25821F344F8A001ABFF9 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		783D25841F3453D3001ABFF9 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		78491D731F4D13BD00953E82 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		78491D751F4D258100953E82 /* RoomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
+		78491D771F4D25F800953E82 /* RoomNomalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNomalViewController.swift; sourceTree = "<group>"; };
 		7849DC9D1F37FB26008E7D75 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		7849DC9F1F380BA3008E7D75 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		7850317C1F42DCE3002CDF2B /* AmuseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmuseViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				78683EBA1F3957F70098A8B8 /* RecommendViewController.swift */,
+				78491D751F4D258100953E82 /* RoomShowViewController.swift */,
+				78491D771F4D25F800953E82 /* RoomNomalViewController.swift */,
 				785031821F442025002CDF2B /* BaseAnchorViewController.swift */,
 				7850317C1F42DCE3002CDF2B /* AmuseViewController.swift */,
 				78491D731F4D13BD00953E82 /* BaseViewController.swift */,
@@ -442,10 +448,12 @@
 				786405B41F3A952000A1DFC3 /* CollectionPrettyCell.swift in Sources */,
 				786405DC1F3AF87D00A1DFC3 /* NSDate-Extension.swift in Sources */,
 				78707BC41F3C5AA00029785F /* CollectionBaseCell.swift in Sources */,
+				78491D781F4D25F800953E82 /* RoomNomalViewController.swift in Sources */,
 				786F0CD01F4BD38D006F936C /* AmuseMenuView.swift in Sources */,
 				783D257B1F341546001ABFF9 /* HomeViewController.swift in Sources */,
 				781152B61F3EA0DC00771076 /* CollectionGameCell.swift in Sources */,
 				786405D71F3AE36500A1DFC3 /* NetworkTools.swift in Sources */,
+				78491D761F4D258100953E82 /* RoomShowViewController.swift in Sources */,
 				783D25851F3453D3001ABFF9 /* Common.swift in Sources */,
 				786405D91F3AE7E900A1DFC3 /* RecommendViewModel.swift in Sources */,
 				786405E11F3B046D00A1DFC3 /* AnchorModel.swift in Sources */,
